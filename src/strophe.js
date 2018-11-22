@@ -1,7 +1,7 @@
 /*global global*/
 
 import * as Strophe from 'core';
-import * as bosh from 'bosh';
+// import * as bosh from 'bosh';
 import * as websocket from 'websocket';
 
 global.Strophe = Strophe.default.Strophe;

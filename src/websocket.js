@@ -417,6 +417,7 @@ Strophe.Websocket.prototype = {
     _onIdle: function () {
         const data = this._conn._data;
         if (data.length > 0 && !this._conn.paused) {
+            this._conn._data = [];
             for (let i=0; i<data.length; i++) {
                 if (data[i] !== null) {
                     let stanza;
@@ -431,7 +432,6 @@ Strophe.Websocket.prototype = {
                     this.socket.send(rawStanza);
                 }
             }
-            this._conn._data = [];
         }
     },
 
